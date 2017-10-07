@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LogikartInc</string>
+    <string name="title_activity_packing_map">Map</string>
+    <string name="title_activity_moving_map">Map</string>
+</resources>
