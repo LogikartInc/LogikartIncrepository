@@ -20,10 +20,10 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
         tools:context="com.example.priyanka.mapsnearbyplaces.MapsActivity"
-        android:layout_below="@+id/B_to" />
+        android:layout_below="@+id/B_to"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,14 +57,12 @@
         android:id="@+id/B_to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/source"
-        android:layout_below="@+id/destination"
-        android:layout_marginEnd="25dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="18dp"
         android:backgroundTint="@color/colorPrimary"
         android:onClick="onClick"
-        android:text="Route" />
+        android:text="Route"
+        android:layout_alignBottom="@+id/date"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:id="@+id/source"
@@ -85,5 +83,35 @@
         android:text="Search"
         android:layout_alignTop="@+id/source"
         android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:hint="Date to pack"
+        android:onClick="date"
+        android:padding="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/destinationButton"
+        android:layout_alignLeft="@+id/destination"
+        android:layout_alignStart="@+id/destination" />
+    <!-- android:background="@drawable/custom_button2"-->
+
+
+    <Button
+        android:id="@+id/next_pack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:onClick="switch2"
+        android:text="Next"
+        android:textSize="20dp" />
 
 </RelativeLayout>

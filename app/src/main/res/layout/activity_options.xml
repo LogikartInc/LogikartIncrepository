@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+
+    android:background="@drawable/backg"
+    tools:context="com.example.ubnmtu.logikart.Options">
+
+    <Button
+        android:id="@+id/moving"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/packing"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/packing"
+        android:layout_marginTop="39dp"
+        android:alpha="1"
+        android:background="@drawable/custom_button2"
+        android:onClick="switch1"
+        android:text="Moving" />
+
+    <Button
+        android:id="@+id/packing"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/moving"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:alpha="1"
+        android:background="@drawable/custom_button2"
+        android:onClick="switch1"
+        android:text="Packing" />
+
+    <Button
+        android:id="@+id/both"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:alpha="1"
+
+        android:background="@drawable/custom_button2"
+        android:onClick="switch1"
+        android:text="Moving and Packing"
+        android:layout_below="@+id/packing"
+        android:layout_alignLeft="@+id/packing"
+        android:layout_alignStart="@+id/packing"
+        android:layout_marginTop="29dp" />
+
+</RelativeLayout>
+

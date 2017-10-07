@@ -1,6 +1,8 @@
 package com.example.chinmay.logikartinc;
 
 import android.Manifest;
+import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -12,6 +14,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -31,6 +34,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -322,6 +326,46 @@ public class PackingMap extends FragmentActivity implements OnMapReadyCallback,
         }
     }
 
+    //CODE FOR SELECTING DATE FOR PACKING
+
+    EditText date;
+    DatePickerDialog datePickerDialog;
+    public void date(View view)
+    {
+
+        date = (EditText) findViewById(R.id.date);
+        Calendar c = Calendar.getInstance();
+
+        int mYear = c.get(Calendar.YEAR);
+        int mMonth = c.get(Calendar.MONTH);
+        int mDay = c.get(Calendar.DAY_OF_MONTH);
+
+        datePickerDialog = new DatePickerDialog(PackingMap.this,
+                new DatePickerDialog.OnDateSetListener()
+                {
+
+                    @Override
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth)
+                    {
+
+                        date.setText(dayOfMonth + "/"
+                                + (monthOfYear + 1) + "/" + year);
+
+                    }
+                }, mYear, mMonth, mDay);
+        datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+        datePickerDialog.show();
+    }
+
+    //code for next button which will jump to select items
+
+    public void switch2(View view)
+    {
+        Intent intent=new Intent(this,ListOfPacking.class);
+        startActivity(intent);
+
+    }
 
 }
 

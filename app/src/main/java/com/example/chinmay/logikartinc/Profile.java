@@ -74,7 +74,7 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
 
         Toast.makeText(this,"Information Saved...", Toast.LENGTH_LONG).show();
 
-        Intent intent=new Intent(this,MovingMap.class);
+        Intent intent=new Intent(this,Options.class);
         startActivity(intent);
 
 
