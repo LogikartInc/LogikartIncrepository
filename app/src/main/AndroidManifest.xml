@@ -31,43 +31,34 @@
 
         <activity
             android:name=".PackingMap"
-            android:label="@string/title_activity_packing_map">
-
-        </activity>
-        <activity android:name=".MovingMap"/>
-
-
-
+            android:label="@string/title_activity_packing_map" />
+        <activity android:name=".MovingMap" />
         <activity android:name=".Login">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".Profile"/>
-        <activity android:name=".Registration"/>
-        <activity android:name=".Options"/>
-        <activity android:name=".ListOfPacking"/>
+        <activity android:name=".Profile" />
+        <activity android:name=".Registration" />
+        <activity android:name=".Options" />
+        <activity android:name=".ListOfPacking" />
+
         <service android:name=".MyFirebaseInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-
-
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
-
         </service>
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-
-
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-
         </service>
 
+        <activity android:name=".Billing" />
+        <activity android:name=".Final" />
+        <activity android:name=".Confirmation"></activity>
     </application>
 
 </manifest>

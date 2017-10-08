@@ -1,6 +1,7 @@
 package com.example.chinmay.logikartinc;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.SparseBooleanArray;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -77,6 +79,16 @@ public class ListOfPacking extends Activity {
 
                 Toast.makeText(ListOfPacking.this, "ListView Selected Values = " + ValueHolder, Toast.LENGTH_LONG).show();
 
+            }
+        });
+
+        Button sub = (Button) findViewById(R.id.submit);
+
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ListOfPacking.this, Billing.class);
+                startActivity(intent);
             }
         });
 
