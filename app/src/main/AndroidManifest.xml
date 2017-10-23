@@ -33,13 +33,8 @@
             android:name=".PackingMap"
             android:label="@string/title_activity_packing_map" />
         <activity android:name=".MovingMap" />
-        <activity android:name=".Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
         <activity android:name=".Profile" />
         <activity android:name=".Registration" />
         <activity android:name=".Options" />
@@ -56,9 +51,19 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".Billing" />
-        <activity android:name=".Final" />
-        <activity android:name=".Confirmation"></activity>
+        <activity android:name=".Confirmation" />
+        <activity android:name=".splash">
+
+        </activity>
+        <activity android:name=".Login">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

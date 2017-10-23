@@ -165,8 +165,6 @@ public class PackingMap extends FragmentActivity implements OnMapReadyCallback,
 
                 }
 
-                Intent intent = new Intent(PackingMap.this, Billing.class);
-                intent.putExtra("source_loc", source_location.getText().toString());
 
 
             }

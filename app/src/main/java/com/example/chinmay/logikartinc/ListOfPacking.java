@@ -87,7 +87,7 @@ public class ListOfPacking extends Activity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ListOfPacking.this, Billing.class);
+                Intent intent = new Intent(ListOfPacking.this, Confirmation.class);
                 startActivity(intent);
             }
         });
